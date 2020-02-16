@@ -1,0 +1,51 @@
+[200~mkdir filename
+windows命令行创建文件
+type nul>filename.filefinalname
+
+windows命令行删除文件夹/文件
+rd /s/q filename
+del /s/q filename
+
+查看jar包目录结构
+jar tvf filename.war/jar(name)
+
+maven导览网址
+https://maven.apache.org/guides/getting-started/index.html#How_do_I_compile_my_test_sources_and_run_my_unit_tests
+
+windows命令行创建maven项目结构
+mvn archetype:generate ^
+-DarchetypeGroupId=\org.apache.maven.archetypes ^
+-DarchetypeArtifactId=
+maven-archetype-"type" ^
+-DgroupId=xxx ^
+-DartifactId=xxx(applicationName) ^
+-DarchetypeCatalog=internal
+
+maven编译pom.xml文件
+mvn compile
+
+maven只编译test单元测试
+mvn test
+mvn test-compile
+
+maven打包当前项目为jar
+mvn package
+
+maven把当前项目的jar包放在maven设置的本地仓库内
+mvn install
+
+maven快速创建当前项目的document网站
+mvn site
+
+maven清理掉target文件夹
+mvn clean
+
+maven执行文件编译，可在target的class文件夹下查看${}表示的键值对
+mvn process-resources
+
+maven可在控制台输入值传送到application.properties中
+mvn process-reources "personalName = value"
+
+maven快速打包多个项目的war包（需要配置父级pom和子级pom）
+mvn verify
+
