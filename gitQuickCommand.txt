@@ -1,0 +1,73 @@
+https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496
+
+配置git全局变量
+git config --global user.name "Your Name"
+git config --glonal user.email "email@example.com"
+
+创建git版本库
+mkdir learngit
+cd learngit
+git init
+ls -ah（查看.git文件）
+
+添加文件
+git add（执行后git diff 查看不了具体增删细节；可同时add多个文件；修改完不git add的内容不会被commit到版本）
+
+修改提交
+git commit -m "this place add the reason"
+
+查看当前状态
+git status
+
+修改查看
+git diff （如果git status告诉你有文件被修改过，用git diff可以查看修改内容。）
+
+查看git经过commit的版本
+git log
+
+回退上一个版本
+git reset --hard HEAD^（^有几个就回退几个版本）
+
+回退到具体版本号
+git reset --hard 1094a（log打出来的版本头几位）
+
+记录每一次执行的命令
+git reflog
+
+把未git add过的文件还原为最新提交版本内容
+git checkout -- filename
+git restore -- filename
+
+把已经git add过的文件还原为最新提交版本内容
+git reset HEAD filename
+
+从版本库删除文件
+git rm filename
+git commit -m "remove filename"
+
+恢复从工作区删除的文件filename
+git checkout -- filename
+
+把自创仓库推送到远程仓库
+git remote add origin git@github.com:用户名（VinnyBear）/推送库名（learngit.git）
+git push -u origin master(-u把本地和远程的合并，首次使用)
+
+从远程仓库复制到本地
+git clone git@github.com:用户名（VinnyBear）/推送库名（learngit.git）
+
+创建并移动到分支dev
+git checkout -b dev（-b表示移动到）
+git switch -b dev
+查看当前分支
+git branch
+
+把dev工作成果合并到master分支
+git merge dev
+
+删除dev分支
+git branch -d dev
+
+
+
+
+
